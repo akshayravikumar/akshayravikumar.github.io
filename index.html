@@ -39,7 +39,9 @@
       }
 
       .btn:hover {
-        transform: scale(1.2);
+        -ms-transform: scale(1.2,1.2); /* IE 9 */
+        -webkit-transform: scale(1.2,1.2); /* Chrome, Safari, Opera */
+        transform: scale(1.2,1.2);
         color:#33CCFF;
       }
 
