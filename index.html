@@ -7,10 +7,11 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
 
     <!-- Latest compiled and minified JavaScript -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
@@ -29,7 +30,7 @@
       /* Grow */
       
         body { 
-          background-image: url('backgroundGradient.png');
+          background-image: url('bkg.png');
           background-repeat: no-repeat;
           background-attachment: fixed;
           background-size:cover;
@@ -51,16 +52,36 @@
       }
 
       .title {
-        font-family: 'Open Sans', sans-serif;
+        /*font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;*/
+        /*font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;*/
+        font-family: 'Roboto', sans-serif;
         font-size: 70px;
-        color:#A9E2F3;
+
+        color:white;
       }
+
+      .hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    }
+
+    .hvr-grow:hover,
+    .hvr-grow:focus,
+    .hvr-grow:active {
+        transform: scale(1.1);
+    }
 </style>
   </head>
   <center>
   <td valign="bottom"> <br/> <br/>
   <img src="pic1.png"  class="img-circle" style="width:240px"> <br/>
-  <font size="100px" color="white" class="title animated zoomIn" >Akshay Ravikumar</font>  <br/>
+  <font size="100px" color="white" class="title animated zoomIn hvr-grow" >Akshay Ravikumar</font>  <br/>
   <a class="btn btn-link hvr-grow animated bounceInDown" href="github.html">
     <span class="fa-stack hvr-grow fa-3x">
     <i class="fa fa-circle-thin fa-stack-2x"></i>
