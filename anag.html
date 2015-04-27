@@ -28,11 +28,13 @@
 <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="text" class="form-control" id="inputWord" placeholder="Enter email">
-    <input type="number" class="form-control" id="inputNum" placeholder="Enter email">
+    <input type="text" class="form-control" id="inputWord" placeholder="Which word would you like to check?">
+    <input type="number" class="form-control" id="inputNum" placeholder="At most how many letters do you want to add?">
   </div>
-  <button type="submit" class="btn btn-default" id = "submitForm">Submit</button>
 </form>
+<button class="btn btn-default" id = "submitForm">Submit</button>
+<div id = "results">
+  </div>
 </body>
 <script>
 
@@ -40,8 +42,7 @@ var words = ["a","aah","aahed","aahing","aahs","aardvark","aardvarks","aardwolf"
 
 
 $("#submitForm").click(function () {
-  console.log("clicked");
-  alert("hey");
+  $("#results").empty();
   getAnagrams($("#inputWord").val(), $("#inputNum").val());
 });
 
@@ -55,25 +56,31 @@ function getAnagrams(input, diff) {
     } 
     wordFreq[input[i]]+=1;
   } 
+  console.log(wordFreq);
 
-  for (var poss in words) {
+  for (var ind = 0; ind < words.length; ind++) {
+    var poss = words[ind];
     var freq = jQuery.extend(true, {}, wordFreq);
     var i = poss.length;
+
     while (i--) {
+
       if (poss[i] in freq) {
-        freq[i]-=1;
-        if (freq[i] == 0) {
-          delete freq[i];
+        freq[poss[i]] = freq[poss[i]] - 1;
+        if (freq[poss[i]] == 0) {
+          delete freq[poss[i]];
         }
       }
-      if (Object.keys(freq).length == 0 && poss.length - input.length <= diff) {
-        console.log(poss);
-      }
+
     } 
+
+    if (Object.keys(freq).length == 0 && (poss.length - input.length) <= diff) {
+        $("#results").append(poss + "<br/>");
+      }
   }
 }
 
-getAnagrams("happy", 10);
+
 </script>
 
 </html>
