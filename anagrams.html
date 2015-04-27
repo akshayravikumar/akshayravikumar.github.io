@@ -136,10 +136,9 @@ function getAnagrams(input, diff) {
       }
     }
     console.log(lettersNeeded);
-    var message = "To get " + poss + ", you need the following letters: ";
+    var message = "To get <b>" + poss + "</b>, you need the following letters: ";
     for (var ind = 0; ind < lettersNeeded.length; ind++) {
-      console.log("adding " + lettersNeeded[ind]);
-      message = message + lettersNeeded[ind].toUpperCase();
+      message = message + "<b>" + lettersNeeded[ind].toUpperCase() + "</b>";
       if (ind != lettersNeeded.length - 1) {
         message = message + ", "
       }
