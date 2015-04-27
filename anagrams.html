@@ -5,12 +5,8 @@
     <meta name=viewport content="width=device-width, initial-scale=1">
     <meta name="author" content="Akshay Ravikumar">
     <link rel="shortcut icon" href="favicon.ico">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-   <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -25,16 +21,22 @@
   </head>
   <body>
 
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="text" class="form-control" id="inputWord" placeholder="Which word would you like to check?">
-    <input type="number" class="form-control" id="inputNum" placeholder="At most how many letters do you want to add?">
-  </div>
+<center>
+<form class="pure-form pure-form-stacked" style = "width: 30%">
+    <fieldset>
+        <label for="email">Which word would you like to check?</label>
+        <input type="text" class="pure-input-1" id="inputWord" placeholder="">
+
+        <label for="email">At most how many letters would you like to add?</label>
+        <input type="number" class="pure-input-1-3" id="inputNum" placeholder="">
+    </fieldset>
 </form>
-<button class="btn btn-default" id = "submitForm">Submit</button>
-<div id = "results">
+<button class="pure-button pure-button-primary" id = "submitForm">Find Steals!</button> <br/>
+<div id = "numAns" style = "font-family: 'Open Sans', sans-serif;">
+  </div> <br/>
+<div id = "results" style = "height: 300px; overflow: scroll; font-family: 'Open Sans', sans-serif;">
   </div>
+</center>
 </body>
 <script>
 
@@ -48,6 +50,15 @@ $("#submitForm").click(function () {
 
 
 function getAnagrams(input, diff) {
+  var numans = 0;
+  if (input.length == 0) {
+    $("#results").append("Please enter a word!");
+    return;
+  }
+  if (!(/^[a-zA-Z]+$/.test(input))) {
+    $("#results").append("Please enter a real word!");
+    return;
+  }
   var wordFreq = {};
   var i = input.length;
   while (i--) {
@@ -76,8 +87,17 @@ function getAnagrams(input, diff) {
 
     if (Object.keys(freq).length == 0 && (poss.length - input.length) <= diff) {
         $("#results").append(poss + "<br/>");
+        numans = numans + 1;
       }
   }
+  if (numans == 0) {
+    $("#numAns").text("There are no results for this word. :(");
+  } else if (numans == 1) {
+    $("#numAns").html("There is only <b> 1 </b> result for this word! Clutch!");
+  } else {
+    $("#numAns").html("There are <b>" + numans + "</b> results for this word!");
+  }
+  
 }
 
 
