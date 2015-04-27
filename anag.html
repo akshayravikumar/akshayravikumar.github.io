@@ -40,8 +40,11 @@ var words = ["a","aah","aahed","aahing","aahs","aardvark","aardvarks","aardwolf"
 
 
 $("#submitForm").click(function () {
+  console.log("clicked");
+  alert("hey");
   getAnagrams($("#inputWord").val(), $("#inputNum").val());
 });
+
 
 function getAnagrams(input, diff) {
   var wordFreq = {};
