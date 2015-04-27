@@ -143,7 +143,7 @@ function getAnagrams(input, diff) {
         message = message + ", "
       }
     }
-    $("#hover").text(message);
+    $("#hover").html(message);
   }); 
 
   $(document).on("mouseleave", "li.wordans", function() {
