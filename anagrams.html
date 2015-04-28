@@ -113,10 +113,8 @@ function getAnagrams(input, diff) {
 
   $(document).on("mouseenter", "li.wordans", function(event) {
     var poss = $(event.target).text();
-    console.log(poss);
     var input = currentword;
     var wordFreq = {};
-    console.log(input);
     var lettersNeeded = [];
     var i = input.length;
     while (i--) {
@@ -135,7 +133,7 @@ function getAnagrams(input, diff) {
         lettersNeeded.push(poss[i]);
       }
     }
-    console.log(lettersNeeded);
+
     var message = "To get <b>" + poss + "</b>, you need the following letters: ";
     for (var ind = 0; ind < lettersNeeded.length; ind++) {
       message = message + "<b>" + lettersNeeded[ind].toUpperCase() + "</b>";
