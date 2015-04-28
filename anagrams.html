@@ -84,8 +84,8 @@ function getAnagrams(input, diff) {
     var poss = words[ind];
     var freq = jQuery.extend(true, {}, wordFreq);
     var i = poss.length;
-
-    while (i--) {
+    var done = false;
+    while (i-- && done == false) {
 
       if (poss[i] in freq) {
         freq[poss[i]] = freq[poss[i]] - 1;
@@ -93,13 +93,14 @@ function getAnagrams(input, diff) {
           delete freq[poss[i]];
         }
       }
-
-    } 
-
-    if (Object.keys(freq).length == 0 && (poss.length - input.length) <= diff && (poss.length - input.length) > 0 && poss.length > 0) {
+       if (Object.keys(freq).length == 0 && (poss.length - input.length) <= diff && (poss.length - input.length) > 0 && poss.length > 0) {
         $("#results").append("<li class = \"wordans\">" + poss.trim() + "</li>");
         numans = numans + 1;
+        done = true;
       }
+    } 
+
+   
   }
   if (numans == 0) {
     $("#numAns").html("There are no results for this word. :(");
