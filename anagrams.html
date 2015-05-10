@@ -71,6 +71,11 @@ function getAnagrams(input, diff) {
     $("#numAns").text("Please enter a real word!");
     return;
   }
+  console.log(diff);
+  if (diff <= 0 || diff == null) {
+    $("#numAns").text("Please enter a positive integer!");
+    return;
+  }
   var wordFreq = {};
   var i = input.length;
   while (i--) {
@@ -148,6 +153,7 @@ function getAnagrams(input, diff) {
   $(document).on("mouseleave", "li.wordans", function() {
     $("#hover").text("Hover over a word to see what letters you need.");
   });
+
 
 
 </script>
