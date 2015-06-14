@@ -147,6 +147,9 @@ function getAnagrams(input, diff) {
         message = message + ", "
       }
     }
+    if (lettersNeeded.length == 0) {
+        message = "This is an exact anagram of the word <b>" + poss + "</b>, you need no new letters!";
+      }
     $("#hover").html(message);
   }); 
 
