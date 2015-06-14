@@ -72,7 +72,7 @@ function getAnagrams(input, diff) {
     return;
   }
   console.log(diff);
-  if (diff <= 0 || diff == null) {
+  if (diff < 0 || diff == null) {
     $("#numAns").text("Please enter a positive integer!");
     return;
   }
@@ -98,7 +98,7 @@ function getAnagrams(input, diff) {
           delete freq[poss[i]];
         }
       }
-       if (Object.keys(freq).length == 0 && (poss.length - input.length) <= diff && (poss.length - input.length) > 0 && poss.length > 0) {
+       if (Object.keys(freq).length == 0 && (poss.length - input.length) <= diff && (poss.length - input.length) >= 0 && poss.length > 0) {
         $("#results").append("<li class = \"wordans\">" + poss.trim() + "</li>");
         numans = numans + 1;
         done = true;
