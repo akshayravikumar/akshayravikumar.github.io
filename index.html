@@ -13,6 +13,9 @@
     <script src = "https://code.jquery.com/jquery-2.1.4.min.js"> </script>
      <!-- Compiled and minified CSS -->
      <script src = "https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"> </script>
+
+      <link rel="stylesheet" href="animate.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
 
     <!-- Compiled and minified JavaScript -->
@@ -62,44 +65,53 @@
   
 <div class = "container">
 
-  <div class = "row valign-wrapper" style = "margin-top: 10%">
+  <div class = "row valign-wrapper" style = "margin-top: 7%">
 
-        <div class = "col m4 s2"> </div>
-        <div class = "col m4 s8 valign" > 
-            <img  class = "responsive-img circle center-align valign" src="intern_pic.jpg" style = "width: 60%; margin: auto">
+        <div class = "col m4"> </div>
+        <div class = "col m4 s12 valign" > 
+            <img  class = "responsive-img circle center-align valign animated fadeIn" src="intern_pic.jpg" style = "width: 60%; margin: auto; -webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s">
         </div>
-        <div class = "col m4 s2"> </div>
+        <div class = "col m4"> </div>
 
     </div>
 
     <div class = "row valign-wrapper">
 
-        <div class = "col m2 s1"> </div>
-        <div class = "col m8 s10 valign" > 
+        <div class = "col m2"> </div>
+        <div class = "col m8 s12 valign" > 
+             <h2 style = "font-weight: 300; -webkit-animation-delay: 0.8s; -moz-animation-delay: 0.8s" id ="responsive_headline" class = "center-align animated flipInX"> 
+                Akshay Ravikumar
+            </h2>
+        </div>
+        <div class = "col m2"> </div>
 
-            <div  style = "font-weight: 300; " class = "center-align responsive_headline"> 
-              Akshay Ravikumar
-            </div>
+    </div>
 
-        <!-- <div class = "col s2"> </div> -->
-          <div class = "row center-align" style = "width: 70%; margin: auto;">
-            <div class = "col m3 s6 center-align"  style = "margin-top: 15px">
+    <div class = "row valign-wrapper">
+
+        <div class = "col s1 m4"> </div>
+        <div class = "col s10 m4"> 
+          <div class = "row center-align">
+            <div class = "col m3 s6 animated fadeInUp" style = "margin-top: 15px; -webkit-animation-delay: 1.0s; -moz-animation-delay: 1.0s">
               <a class="btn-floating btn-large waves-effect waves-light amber lighten-3" href = "github.html" style = "width: 80px; height: 80px">
                   <i class="fa fa-github-alt center-align valign"  style = "font-size: 50px; margin-top: 12px"></i>
               </a>
             </div>
-            <div class = "col m3 s6" style = "margin-top: 15px">
+            <div class = "col m3 s6 animated fadeInUp" style = "margin-top: 15px; -webkit-animation-delay: 1.3s; -moz-animation-delay: 1.3s">
               <a class="btn-floating btn-large waves-effect waves-light light-blue lighten-3"  href = "linkedin.html" style = "width: 80px; height: 80px">
                 <i class="fa fa-linkedin center-align valign"  style = "font-size: 50px; margin-top: 12px"></i>
               </a>
             </div>
-            <div class = "col m3 s6" style = "margin-top: 15px">
+            <div class = "col m3 s6 animated fadeInUp" style = "margin-top: 15px; -webkit-animation-delay: 1.6s; -moz-animation-delay: 1.6s">
               <a class="btn-floating btn-large waves-effect waves-light  purple lighten-3"  href = "resume.html" style = "width: 80px; height: 80px"><i class="fa fa-file-text-o  center-align valign"  style = "font-size: 50px; margin-top: 12px"></i></a>
             </div>
-            <div class = "col m3 s6" style = "margin-top: 15px">
+            <div class = "col m3 s6 animated fadeInUp" style = "margin-top: 15px; -webkit-animation-delay: 1.9s; -moz-animation-delay: 1.9s">
               <a class="btn-floating btn-large waves-effect waves-light deep-orange lighten-3"  href = "email.html" style = "width: 80px; height: 80px"><i class="fa fa-envelope  center-align valign" style = "font-size: 50px; margin-top: 12px"></i></a>
             </div>
           </div>
+          </div>
+          <div class = "col s1 m4"> </div>
+        </div>
 
     </div>
 </div>
@@ -108,8 +120,7 @@
 
 <script>
 $(document).ready(function() {
-  jQuery(".responsive_headline").fitText();
-  Materialize.showStaggeredList('#staggered');
+  jQuery("#responsive_headline").fitText(); 
 });
 </script>
 
