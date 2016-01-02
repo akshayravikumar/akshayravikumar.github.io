@@ -4,23 +4,18 @@
     <meta name="description" content="MIT student, math geek, full-stack programmer, licensed badass.">
     <meta name="author" content="Akshay Ravikumar">
     <link rel="shortcut icon" href="assets/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="./assets/font-awesome-4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/animate.min.css">
+    <link rel="stylesheet" href="./assets/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- javascript files -->
+    <script src = "./assets/js/particles.min.js"> </script>
 
-    <script src = "https://code.jquery.com/jquery-2.1.4.min.js"> </script>
-     <!-- Compiled and minified CSS -->
-     <script src = "https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"> </script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
-
-    <script src = "particles.min.js"> </script>
+    <!-- google analytics -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -28,84 +23,63 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-57980659-1', 'auto');
       ga('send', 'pageview');
-      </script>
-
-      <style>
-      /* Grow */
-      img {
-         padding:0px;
-         border:8px solid white;
-      }
-
-      .container {
-        margin: 0 auto;
-        max-width: 1280px;
-        width: 95%;
-      }
-      @media only screen and (min-width : 601px) {
-        .container {
-          width: 95%; }
-        }
-      @media only screen and (min-width : 993px) {
-        .container {
-          width: 95%; }
-        }
-</style>
+    </script>
   </head>
-<body class = "blue-grey darken-4" >
+<body class="blue-grey darken-4">
 
-<div class = "container">
+<div class="container">
   <div id="particles-js" style="position:fixed;width:100%;height:100%;left:0;top:0;"></div>
 
-  <div class = "row valign-wrapper" style = "margin-top: 7%" >
+  <div class="row valign-wrapper" style = "margin-top: 7%" >
 
-        <div class = "col m4"> </div>
-        <div class = "col m4 s12 valign" >
-            <img  class = "responsive-img circle center-align valign animated fadeIn" src="assets/intern_pic.jpg" style = "width: 60%; margin: auto; -webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s">
+        <div class="col m4"> </div>
+        <div class="col m4 s12 valign" >
+            <img class="responsive-img circle center-align valign animated fadeIn" id="main-image" src="assets/img/intern_pic.jpg">
         </div>
-        <div class = "col m4"> </div>
+        <div class="col m4"> </div>
 
     </div>
 
-    <div class = "row valign-wrapper">
+    <div class="row valign-wrapper">
 
-        <div class = "col m2"> </div>
-        <div class = "col m8 s12 valign" >
-             <h2 style = "font-weight: 200; -webkit-animation-delay: 0.8s; -moz-animation-delay: 0.8s;" id ="responsive_headline" class = "center-align animated flipInX white-text">
+        <div class="col m2"> </div>
+        <div class="col m8 s12 valign" >
+             <h2 id="headline" class="center-align animated flipInX white-text">
                 Akshay Ravikumar
             </h2>
-           <!--  <h2 style = "font-weight: 200; -webkit-animation-delay: 0.8s; -moz-animation-delay: 0.8s" id ="responsive_headline_2" class = "center-align animated flipInX white-text">
-                Ravikumar
-            </h2> -->
         </div>
-        <div class = "col m2"> </div>
+        <div class="col m2"> </div>
 
     </div>
 
-    <div class = "row valign-wrapper">
+    <div class="row valign-wrapper">
 
-        <div class = "col s1 m3 l4"> </div>
-        <div class = "col s10 m6 l4">
-          <div class = "row center-align">
-            <div class = "col m3 s6 animated fadeInUp" style = "margin-top: 15px; -webkit-animation-delay: 1.0s; -moz-animation-delay: 1.0s">
-              <a class="btn-floating btn-large waves-effect waves-light amber lighten-1" href = "github.html" style = "width: 80px; height: 80px">
-                  <i class="fa fa-github-alt center-align valign"  style = "font-size: 50px; margin-top: 12px"></i>
+        <div class="col s1 m3 l4"> </div>
+        <div class="col s10 m6 l4">
+          <div class="row center-align">
+            <div class="col m3 s6 animated fadeInUp" id="github-button">
+              <a class="btn-floating btn-large waves-effect waves-light amber lighten-1" href = "github.html" id="github-link">
+                  <i class="fa fa-github-alt center-align valign" id="github-icon"></i>
               </a>
             </div>
-            <div class = "col m3 s6 animated fadeInUp" style = "margin-top: 15px; -webkit-animation-delay: 1.3s; -moz-animation-delay: 1.3s">
-              <a class="btn-floating btn-large waves-effect waves-light light-blue lighten-1"  href = "linkedin.html" style = "width: 80px; height: 80px">
-                <i class="fa fa-linkedin center-align valign"  style = "font-size: 50px; margin-top: 12px"></i>
+            <div class="col m3 s6 animated fadeInUp" id="linkedin-button">
+              <a class="btn-floating btn-large waves-effect waves-light light-blue lighten-1"  href = "linkedin.html" id="linkedin-link">
+                <i class="fa fa-linkedin center-align valign" id="linkedin-icon"></i>
               </a>
             </div>
-            <div class = "col m3 s6 animated fadeInUp" style = "margin-top: 15px; -webkit-animation-delay: 1.6s; -moz-animation-delay: 1.6s">
-              <a class="btn-floating btn-large waves-effect waves-light  purple lighten-1"  href = "resume.html" style = "width: 80px; height: 80px"><i class="fa fa-file-text-o  center-align valign"  style = "font-size: 50px; margin-top: 12px"></i></a>
+            <div class="col m3 s6 animated fadeInUp" id="resume-button">
+              <a class="btn-floating btn-large waves-effect waves-light  purple lighten-1"  href = "resume.html" id="resume-link">
+              <i class="fa fa-file-text-o  center-align valign" id="resume-icon"></i>
+              </a>
             </div>
-            <div class = "col m3 s6 animated fadeInUp" style = "margin-top: 15px; -webkit-animation-delay: 1.9s; -moz-animation-delay: 1.9s">
-              <a class="btn-floating btn-large waves-effect waves-light deep-orange lighten-1"  href = "email.html" style = "width: 80px; height: 80px"><i class="fa fa-envelope  center-align valign" style = "font-size: 50px; margin-top: 12px"></i></a>
+            <div class="col m3 s6 animated fadeInUp" id="email-button">
+              <a class="btn-floating btn-large waves-effect waves-light deep-orange lighten-1"  href = "email.html" id="email-link">
+              <i class="fa fa-envelope  center-align valign" id="email-icon"></i>
+              </a>
             </div>
           </div>
           </div>
-          <div class = "col s1 m3 l4"> </div>
+          <div class="col s1 m3 l4"> </div>
         </div>
 
     </div>
@@ -113,122 +87,7 @@
 
 </body>
 
-<script>
-$(document).ready(function() {
-  jQuery("#responsive_headline").fitText();
-  jQuery("#responsive_headline_2").fitText();
-  /* ---- particles.js config ---- */
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 100,
-      "density": {
-        "enable": true,
-        "value_area": 800
-      }
-    },
-    "color": {
-      "value": "#ffffff"
-    },
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 0.5,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 3,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#ffffff",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 6,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "grab"
-      },
-      "onclick": {
-        "enable": false,
-        "mode": "push"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 140,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
-      },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
-});
-});
-</script>
+<!-- to load particles.js -->
+<script src="./assets/js/index.js"></script>
 
 </html>
