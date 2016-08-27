@@ -1,4 +1,4 @@
-body {
+html, body {
 	background: #3498db; /* fallback for old browsers */
 	background: -webkit-linear-gradient(to left, #9b59b6, #3498db); /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to left, #9b59b6, #3498db); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -15,11 +15,11 @@ body {
 	height: 100%;
 	left: 0;
 	top: 0;
-	z-index: -150;
+	z-index: 0;
 }
 
 #headline {
-	font-size: 4.5em;
+	font-size: 4em;
 	font-weight: 300;
 	color: white;
 	-webkit-animation-delay: 0.8s; 
@@ -33,6 +33,16 @@ body {
 	color: white;
 	-webkit-animation-delay: 0.8s; 
 	-moz-animation-delay: 0.8s;
+}
+
+@media (max-width:799px){
+	#headline {
+		font-size: 3.2em;
+	}
+
+	#subtitle {
+		font-size: 1.8em;
+	}
 }
 
 @media (max-width:399px){
