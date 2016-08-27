@@ -1,14 +1,14 @@
-#main-container {
-	margin-top: 10vh;
+body {
+	background: #5C258D; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #5C258D , #4389A2); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #5C258D , #4389A2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-#main-image {
-	padding: 0px;
-	border: 8px solid white;
-	width: 60%; 
-	margin: auto; 
+
+#image {
 	-webkit-animation-delay: 0.2s; 
 	-moz-animation-delay: 0.2s;
 }
+
 #particles-js {
 	position: fixed;
 	width: 100%;
@@ -18,60 +18,54 @@
 	z-index: -150;
 }
 
-.container {
-	margin: 0 auto;
-	max-width: 1280px;
-	width: 95%;
+#headline {
+	font-size: 4.5em;
+	font-weight: 300;
+	color: white;
+	-webkit-animation-delay: 0.8s; 
+	-moz-animation-delay: 0.8s;
 }
 
-@media only screen and (min-width : 601px) {
-	.container {
-	  width: 95%; 
-	}
+#subtitle {
+	font-style: italic;
+	font-size: 2em;
+	font-weight: 100;
+	color: white;
+	-webkit-animation-delay: 0.8s; 
+	-moz-animation-delay: 0.8s;
 }
 
-@media only screen and (min-width : 993px) {
-	.container {
-	  width: 95%; 
-	}
-}
-
-#linkedin-icon, #github-icon, #email-icon, #resume-icon {
-	font-size: 50px; 
-	margin-top: 12px;
-}
-
-#github-button {
-	margin-top: 15px; 
-	-webkit-animation-delay: 1.0s; 
-	-moz-animation-delay: 1.0s;
-}
-
-#linkedin-button {
-	margin-top: 15px; 
-	-webkit-animation-delay: 1.3s; 
-	-moz-animation-delay: 1.3s;
-}
-
-#resume-button {
-	margin-top: 15px; 
-	-webkit-animation-delay: 1.6s; 
-	-moz-animation-delay: 1.6s;
+#resume-button, #linkedin-button, #email-button, #github-button {
+	color: white;
+	font-size: 1.5rem;
 }
 
 #email-button {
-	margin-top: 15px; 
-	-webkit-animation-delay: 1.9s; 
-	-moz-animation-delay: 1.9s;
+	-webkit-animation-delay: 1.3s; /* Chrome, Safari, Opera */
+    animation-delay: 1.3s;
 }
 
-#linkedin-link, #github-link, #email-link, #resume-link {
-	width: 80px; 
-	height: 80px;
+#linkedin-button {
+	-webkit-animation-delay: 1.6s; /* Chrome, Safari, Opera */
+    animation-delay: 1.6s;
 }
 
-#headline {
-	font-weight: 200; 
-	-webkit-animation-delay: 0.8s; 
-	-moz-animation-delay: 0.8s;" id ="responsive_headline" class = "center-align animated flipInX white-text"
+#resume-button {
+	-webkit-animation-delay: 1.9s; /* Chrome, Safari, Opera */
+    animation-delay: 1.9s;
+}
+
+#github-button {
+	-webkit-animation-delay: 2.2s; /* Chrome, Safari, Opera */
+    animation-delay: 2.2s;
+}
+
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	user-select: none;           /* Non-prefixed version, currently not supported by any browser */
+    cursor: default;
 }
