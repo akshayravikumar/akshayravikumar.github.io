@@ -324,14 +324,19 @@ class Perceptron:
         """ Train perceptron! Your job is to figure out this function. """
         self.num_iterations = 0
         while True:
+            mistakes = False
             for x, y in self.training_examples: 
-                # IMPORTANT: When there is a mistake, call self.plot_and_wait(x)
-                # where x is the x-value of the mistake.
-                self.plot_and_wait(x)
-                self.theta = Vector(random.random(), random.random())
-                self.theta0 = random.random()
+                # FILL IN THIS CODE
+                h = None
+                if h != y:
+                    mistakes = True
+                    # FILL IN THIS CODE
+                    self.plot_and_wait(x)
 
             # Keep this code.
+            if not mistakes:
+                break
+
             self.num_iterations = self.num_iterations + 1
             if self.num_iterations == self.max_iterations:
                 break
@@ -348,5 +353,4 @@ if __name__ == "__main__":
     examples = p.ask_for_points()
     p = Perceptron(examples)
     p.train()
-
 
