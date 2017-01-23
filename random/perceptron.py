@@ -324,6 +324,7 @@ class Perceptron:
         """ Train perceptron! Your job is to figure out this function. """
         self.num_iterations = 0
         while True:
+            mistakes = False
             for x, y in self.training_examples: 
                 # FILL IN THIS CODE
                 h = None
