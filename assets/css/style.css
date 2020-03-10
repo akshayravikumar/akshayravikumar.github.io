@@ -7,6 +7,10 @@ html, body {
 	background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+#work-link {
+	color: #98d6ea;
+}
+
 #image {
 	-webkit-animation-delay: 0.2s; 
 	-moz-animation-delay: 0.2s;
