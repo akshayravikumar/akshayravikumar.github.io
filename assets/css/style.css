@@ -62,9 +62,9 @@ html, body {
 	}
 }
 
-#resume-button, #linkedin-button, #email-button, #github-button {
+#resume-button, #linkedin-button, #email-button, #github-button, #blog-button {
 	color: white;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 }
 
 #email-button {
@@ -82,9 +82,14 @@ html, body {
     animation-delay: 1.9s;
 }
 
-#github-button {
+#blog-button {
 	-webkit-animation-delay: 2.2s; /* Chrome, Safari, Opera */
     animation-delay: 2.2s;
+}
+
+#github-button {
+	-webkit-animation-delay: 2.5s; /* Chrome, Safari, Opera */
+    animation-delay: 2.5s;
 }
 
 .noselect {
