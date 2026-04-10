@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&amp;display=swap');
+    .bg { fill: #7A8C66; }
+    .text {
+      fill: #1F2A22;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 300px;
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+  </style>
+  <rect class="bg" width="512" height="512" />
+  <text x="256" y="256" class="text">AR</text>
+</svg>
