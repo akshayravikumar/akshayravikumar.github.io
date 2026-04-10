@@ -7,11 +7,15 @@
   --link-hover: #121A15;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   background-color: var(--bg-sage);
   height: 100%;
-  overflow: hidden;
-  overscroll-behavior: none;
 }
 
 body {
@@ -20,14 +24,14 @@ body {
   color: var(--text-primary);
   font-family: 'Cormorant Garamond', serif;
   line-height: 1.6;
-  height: 100%;
-  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden;
-  overscroll-behavior: none;
+  overflow-x: hidden;
 }
 
 body::before,
@@ -86,7 +90,6 @@ body::after {
   max-width: 800px;
   margin: 0 auto;
   padding: 4rem;
-  box-sizing: border-box;
   text-align: center;
 }
 
