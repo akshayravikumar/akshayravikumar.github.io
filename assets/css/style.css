@@ -1,10 +1,10 @@
 /* Base Styles */
 :root {
-  --bg-sage: #5C7290;
-  --text-primary: #1A222E;
-  --text-secondary: #343F4F;
-  --link-color: #0F151E;
-  --link-hover: #0F151E;
+  --bg-sage: #172237;
+  --text-primary: #D1E3FA;
+  --text-secondary: #BACAD6;
+  --link-color: #A5C4EC;
+  --link-hover: #FFFFFF;
 }
 
 html {
@@ -37,10 +37,10 @@ body {
   
   body::before {
   background-image: 
-    radial-gradient(circle at 20% 30%, rgba(224, 230, 240, 0.6) 2px, transparent 2px),
-    radial-gradient(circle at 60% 70%, rgba(224, 230, 240, 0.4) 3px, transparent 3px),
-    radial-gradient(circle at 80% 10%, rgba(224, 230, 240, 0.5) 1.5px, transparent 1.5px),
-    radial-gradient(circle at 40% 90%, rgba(224, 230, 240, 0.3) 4px, transparent 4px);
+    radial-gradient(circle at 20% 30%, rgba(165, 196, 236, 0.6) 2px, transparent 2px),
+    radial-gradient(circle at 60% 70%, rgba(165, 196, 236, 0.4) 3px, transparent 3px),
+    radial-gradient(circle at 80% 10%, rgba(165, 196, 236, 0.5) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 40% 90%, rgba(165, 196, 236, 0.3) 4px, transparent 4px);
   background-size: 200px 200px;
   animation: drift1 40s linear infinite;
   opacity: 0.4;
@@ -48,10 +48,10 @@ body {
 
 body::after {
   background-image: 
-    radial-gradient(circle at 10% 50%, rgba(224, 230, 240, 0.4) 1.5px, transparent 1.5px),
-    radial-gradient(circle at 70% 20%, rgba(224, 230, 240, 0.5) 2.5px, transparent 2.5px),
-    radial-gradient(circle at 30% 80%, rgba(224, 230, 240, 0.3) 2px, transparent 2px),
-    radial-gradient(circle at 90% 60%, rgba(224, 230, 240, 0.6) 3.5px, transparent 3.5px);
+    radial-gradient(circle at 10% 50%, rgba(165, 196, 236, 0.4) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 70% 20%, rgba(165, 196, 236, 0.5) 2.5px, transparent 2.5px),
+    radial-gradient(circle at 30% 80%, rgba(165, 196, 236, 0.3) 2px, transparent 2px),
+    radial-gradient(circle at 90% 60%, rgba(165, 196, 236, 0.6) 3.5px, transparent 3.5px);
   background-size: 300px 300px;
   animation: drift2 60s linear infinite;
   opacity: 0.3;
