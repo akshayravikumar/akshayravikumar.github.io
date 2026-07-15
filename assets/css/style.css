@@ -7,9 +7,17 @@
   --link-hover: #FFFFFF;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   background-color: var(--bg-sage);
+  height: 100%;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -17,26 +25,29 @@ body {
   font-family: 'Cormorant Garamond', serif;
   line-height: 1.6;
   min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
-    position: relative;
-  }
-  
-  body::before,
-  body::after {
-    content: '';
-    position: fixed;
-    top: -200px;
-    left: -200px;
-    right: -200px;
-    bottom: -200px;
-    pointer-events: none;
-    z-index: -1;
-  }
-  
-  body::before {
-  background-image: 
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  top: -200px;
+  left: -200px;
+  right: -200px;
+  bottom: -200px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::before {
+  background-image:
     radial-gradient(circle at 20% 30%, rgba(165, 196, 236, 0.6) 2px, transparent 2px),
     radial-gradient(circle at 60% 70%, rgba(165, 196, 236, 0.4) 3px, transparent 3px),
     radial-gradient(circle at 80% 10%, rgba(165, 196, 236, 0.5) 1.5px, transparent 1.5px),
@@ -47,7 +58,7 @@ body {
 }
 
 body::after {
-  background-image: 
+  background-image:
     radial-gradient(circle at 10% 50%, rgba(165, 196, 236, 0.4) 1.5px, transparent 1.5px),
     radial-gradient(circle at 70% 20%, rgba(165, 196, 236, 0.5) 2.5px, transparent 2.5px),
     radial-gradient(circle at 30% 80%, rgba(165, 196, 236, 0.3) 2px, transparent 2px),
@@ -58,20 +69,28 @@ body::after {
 }
 
 @keyframes drift1 {
-  from { transform: translate(0, 0); }
-  to { transform: translate(100px, 100px); }
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(100px, 100px);
+  }
 }
 
 @keyframes drift2 {
-  from { transform: translate(0, 0); }
-  to { transform: translate(-80px, 80px); }
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-80px, 80px);
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 4rem;
-  box-sizing: border-box;
   text-align: center;
 }
 
