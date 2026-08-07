@@ -56,8 +56,23 @@
       <a href="https://akshayr.xyz/blog" target="_blank">Blog</a>
       <a href="https://github.com/akshayravikumar" target="_blank" rel="noopener noreferrer">GitHub</a>
     </nav>
-  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('mouseenter', () => {
+          // Generate subtle random tilt (-3deg to +3deg)
+          let tilt = (Math.random() * 6 - 3).toFixed(1);
+          if (Math.abs(parseFloat(tilt)) < 0.8) tilt = tilt >= 0 ? '1.5' : '-1.5';
 
+          // Generate subtle random lift (-2px to -6px)
+          const lift = (Math.random() * 4 + 2).toFixed(1);
+
+          link.style.setProperty('--hover-tilt', `${tilt}deg`);
+          link.style.setProperty('--hover-lift', `-${lift}px`);
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>

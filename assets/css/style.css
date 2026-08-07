@@ -123,16 +123,27 @@ body::after {
 
 /* Links */
 a {
+  display: inline-block;
   color: var(--link-color);
   text-decoration: underline transparent;
   text-decoration-thickness: 2px;
-  transition: all 0.4s ease-in-out;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease, text-decoration-color 0.3s ease;
+  --hover-tilt: -2deg;
+  --hover-lift: -3px;
 }
 
 a:hover {
   text-decoration-color: var(--link-hover);
   color: var(--link-hover);
+  transform: translateY(var(--hover-lift)) rotate(var(--hover-tilt));
 }
+
+/* Fallback varied preset tilts & lifts */
+.links a:nth-child(1) { --hover-tilt: -2.5deg; --hover-lift: -4px; }
+.links a:nth-child(2) { --hover-tilt: 2deg; --hover-lift: -2.5px; }
+.links a:nth-child(3) { --hover-tilt: -1.5deg; --hover-lift: -5px; }
+.links a:nth-child(4) { --hover-tilt: 3deg; --hover-lift: -3px; }
+.links a:nth-child(5) { --hover-tilt: -2deg; --hover-lift: -4.5px; }
 
 a.work-link {
   font-style: normal;
@@ -149,6 +160,7 @@ a.work-link {
 }
 
 .links a {
+  display: inline-block;
   font-size: 1.2rem;
   color: var(--text-primary);
   font-weight: 400;
